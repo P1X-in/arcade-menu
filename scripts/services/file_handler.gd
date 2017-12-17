@@ -19,14 +19,17 @@ func __create_file_if_not_exists(path):
     if !file.file_exists(path):
         self.write(path, {'is_ok' : 1})
 
-func read_text(path):
+func read_text(path, skip_empty_lines=true):
     var lines = []
+    var line
 
     if self.file.file_exists(path):
         self.file.open(path, File.READ)
 
         while !self.file.eof_reached():
-            lines.append(self.file.get_line())
+            line = self.file.get_line()
+            if !line.empty() or !skip_empty_lines:
+                lines.append(line)
 
         self.file.close()
 
