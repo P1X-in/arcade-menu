@@ -1,4 +1,4 @@
-extends "res://scripts/bag_aware.gd"
+extends "res://scripts/services/bag_aware.gd"
 
 const LIST_FILENAME = "games.list"
 const LIST_DIRECTORY = "/games/"

@@ -1,4 +1,4 @@
-extends "res://scripts/bag_aware.gd"
+extends "res://scripts/services/bag_aware.gd"
 
 
 var keyboard_template = preload("res://scripts/input/keyboard.gd")
