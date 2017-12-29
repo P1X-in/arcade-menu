@@ -10,8 +10,8 @@ func _initialize():
 
 
 func go_to_cover(index):
-    var x = self.selector_area.LEFT * (index + 1) + self.selector_area.WIDTH * index# + self.selector_area.WIDTH / 2
-    var y = self.selector_area.TOP + self.selector_area.HEIGHT / 3
+    var x = self.selector_area.LEFT * (index + 1) + self.selector_area.WIDTH * index
+    var y = self.selector_area.TOP
 
     self.camera.set_offset(Vector2(x, y))
 

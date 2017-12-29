@@ -1,8 +1,8 @@
 extends "res://scripts/bag_aware.gd"
 
 const TOP = 250
-const LEFT = 200
-const WIDTH = 400
+const LEFT = 100
+const WIDTH = 600
 const HEIGHT = 400
 
 
