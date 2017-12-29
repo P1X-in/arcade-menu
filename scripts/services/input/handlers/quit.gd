@@ -1,4 +1,4 @@
-extends "res://scripts/input/handlers/keyboard_handler.gd"
+extends "res://scripts/services/input/handlers/keyboard_handler.gd"
 
 func _init():
     self.scancode = KEY_ESCAPE
