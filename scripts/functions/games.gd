@@ -7,7 +7,6 @@ var games = []
 
 func _initialize():
     self._from_file()
-    print(self.games)
 
 func _from_file():
     self.games = self.bag.file_handler.read_text(self.LIST_FILENAME)

@@ -10,6 +10,8 @@ var sounds = preload("res://scripts/services/sounds.gd").new()
 
 # FUNCTIONALITIES
 var games = preload("res://scripts/functions/games.gd").new()
+var selector = preload("res://scripts/functions/selector.gd").new()
+var camera = preload("res://scripts/functions/camera.gd").new()
 
 func _init_bag(root):
     self.root = root
@@ -20,6 +22,8 @@ func _init_bag(root):
     self.sounds._init_bag(self)
 
     self.games._init_bag(self)
+    self.selector._init_bag(self)
+    self.camera._init_bag(self)
 
 func reset():
     return
