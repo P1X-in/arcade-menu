@@ -7,6 +7,7 @@ const HEIGHT = 400
 
 
 var games = null
+var camera = null
 
 var game_cover_template = preload("res://scenes/game.tscn")
 var covers = []
@@ -16,6 +17,7 @@ var covers_mount = null
 
 func _initialize():
     self.games = self.bag.games
+    self.camera = self.bag.camera
     self.covers_mount = self.bag.root.get_node('Viewport')
     self.build_covers()
     self.place_covers()
@@ -46,4 +48,24 @@ func place_covers():
 
         index = index + 1
 
+func shift_left():
+    if self.index == 0:
+        return
+
+    self.index = self.index - 1
+    self.camera.go_to_cover(index)
+
+func shift_right():
+    if self.index == self.covers.size() - 1:
+        return
+
+    self.index = self.index + 1
+    self.camera.go_to_cover(index)
+
+
+func run_game():
+    var path = self.games.get(self.index)
+    var output = []
+    print(path + "/game.bin")
+    OS.execute(path + "/game.bin", [], true, output)
 

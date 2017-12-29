@@ -14,12 +14,12 @@ var arcade_template = preload("res://scripts/services/input/arcade.gd")
 var any_device_template = preload("res://scripts/services/input/any_device.gd")
 
 var schemes = {
-    "none" : {
+    "default" : {
         "keyboard" : self.keyboard_template.new(),
     }
 }
 
-var active_scheme = "none"
+var active_scheme = "default"
 
 func _initialize():
     self._load_basic_input()
@@ -33,7 +33,8 @@ func switch_to_scheme(scheme):
     self.active_scheme = scheme
 
 func _load_basic_input():
-    self.register_handler('none', 'keyboard', preload("res://scripts/services/input/handlers/quit.gd").new())
+    self.register_handler('default', 'keyboard', preload("res://scripts/services/input/handlers/quit.gd").new())
+    self.load_input()
 
 func create_scheme(name):
     if not self.schemes.has(name):
@@ -59,3 +60,7 @@ func register_device(scheme, device, device_id=0):
 
 func register_handler(scheme, device, handler):
     self.schemes[scheme][device].register_handler(handler)
+
+
+func load_input():
+    return

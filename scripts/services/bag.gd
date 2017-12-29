@@ -10,12 +10,17 @@ var sounds = preload("res://scripts/services/sounds.gd").new()
 func _init_bag(root):
     self.root = root
 
+    self._pre_initialize()
+
     self.processing._init_bag(self)
     self.timers._init_bag(self)
     self.input._init_bag(self)
     self.sounds._init_bag(self)
 
     self._initialize()
+
+func _pre_initialize():
+    return
 
 func _initialize():
     return
