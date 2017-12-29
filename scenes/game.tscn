@@ -1,0 +1,18 @@
+[gd_scene format=1]
+
+[node name="game" type="Control"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 400.0
+margin/bottom = 400.0
+
+[node name="cover" type="Sprite" parent="."]
+
+region_rect = Rect2( 400, 300, 0, 0 )
+
+
