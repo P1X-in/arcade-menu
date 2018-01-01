@@ -69,3 +69,5 @@ func run_game():
     print(path + "/game.bin")
     OS.execute(path + "/game.bin", [], true, output)
 
+    self.bag.input.temp_lock_input()
+
