@@ -18,6 +18,8 @@ func load_input():
     self.register_handler('default', self.DEVICE_ARCADE, preload("res://scripts/input/handlers/run_game_arcade.gd").new(20, self.bag.selector))
 
     self.create_scheme("empty")
+    self.register_device('empty', self.DEVICE_ARCADE)
+    self.register_device('empty', self.DEVICE_KEYBOARD)
 
 
 func lock_input():

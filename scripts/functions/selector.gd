@@ -39,7 +39,7 @@ func build_covers():
 func place_covers():
     var index = 0
     var x
-    var y = self.TOP
+    var y = self.TOP + 50
 
     for cover in self.covers:
         self.covers_mount.add_child(cover)
