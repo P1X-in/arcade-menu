@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=1]
+[gd_scene load_steps=6 format=1]
 
 [ext_resource path="res://scripts/bootstrap.gd" type="Script" id=1]
 [ext_resource path="res://scripts/cosmos.gd" type="Script" id=2]
-[ext_resource path="res://scenes/white_400px.png" type="Texture" id=3]
+[ext_resource path="res://scenes/moon.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/white_400px.png" type="Texture" id=4]
 
 [sub_resource type="Animation" id=1]
 
@@ -92,6 +93,10 @@ playback/speed = 0.05
 blend_times = [  ]
 autoplay = "demo"
 
+[node name="moon" parent="Viewport/center" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 323.695, 131.944 )
+
 [node name="camera" type="Camera2D" parent="Viewport"]
 
 anchor_mode = 1
@@ -115,6 +120,6 @@ drag_margin/bottom = 0.2
 
 transform/pos = Vector2( 640, 150 )
 transform/scale = Vector2( 0.25, 0.25 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 

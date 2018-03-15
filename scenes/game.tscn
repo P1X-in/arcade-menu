@@ -1,18 +1,43 @@
-[gd_scene format=1]
+[gd_scene load_steps=4 format=1]
 
-[node name="game" type="Control"]
+[ext_resource path="res://scenes/button.png" type="Texture" id=1]
+[ext_resource path="res://scenes/dummy-cover.png" type="Texture" id=2]
 
+[sub_resource type="StyleBoxTexture" id=1]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 1 )
+margin/left = 12.0
+margin/right = 12.0
+margin/top = 12.0
+margin/bottom = 12.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[node name="game" type="Panel"]
+
+rect/rotation = 15.0
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 400.0
-margin/bottom = 400.0
+margin/left = -320.0
+margin/top = -570.0
+margin/right = 100.0
+margin/bottom = -250.0
+custom_styles/panel = SubResource( 1 )
 
 [node name="cover" type="Sprite" parent="."]
 
+transform/pos = Vector2( 10, 10 )
+texture = ExtResource( 2 )
+centered = false
 region_rect = Rect2( 400, 300, 0, 0 )
 
 
